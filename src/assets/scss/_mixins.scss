@@ -4,6 +4,7 @@
 /// Mixin - Clearfix.
 /// Adds clearfix based on http://bourbon.io/docs/#clearfix
 /// use example =   @include cleafix
+@use "sass:math";
 
 @mixin clearfix {
     &::after {
@@ -63,7 +64,7 @@
   }
   
   @function strip-unit($num) {
-    @return $num / ($num * 0 + 1);
+    @return math.div($num, $num * 0 + 1);
   }
   
   @mixin set-breakpoint($breakpoint) {
@@ -87,10 +88,10 @@
   $fluid-container-min-width: 20rem; // 320px
   
   /* stylelint-disable */
-  @mixin fluid-font($max-font-size, $fluid-font-scale: 0.5, $important: false) {
+  @mixin fluid-font($max-font-size, $fluid-font-scale: 0.5) {
     $min-font-size: $max-font-size * $fluid-font-scale;
   
-    font-size: $max-font-size if-important($important);
+    font-size: $max-font-size;
   
     @media screen and (max-width: $fluid-container-max-width) {
       font-size:
@@ -102,11 +103,11 @@
             )}
           )
         )
-        if-important($important);
+        ;
     }
   
     @media screen and (max-width: $fluid-container-min-width) {
-      font-size: $min-font-size if-important($important);
+      font-size: $min-font-size;
     }
   }
   /* stylelint-enable */

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReactSVG } from 'react-svg'
+import './_statistic.scss';
 
 interface StatisticProps {
  icon: string,
@@ -14,10 +14,12 @@ const Statistic = ({icon, figure, description, backgroundColor, textColor}: Stat
   return (
     <div className='statistic' style={{backgroundColor: backgroundColor, color: textColor}}>
         <div className="statistic__icon">
-            <ReactSVG src={icon} />
+            <img src={icon} alt={description} />
         </div>
-        <div className="statistic__figure">{figure}</div>
-        <div className='statistic__description'>{description}</div>
+       <div className='statistic__info'>
+          <div className="statistic__figure">{figure}</div>
+          <div className='statistic__description'>{description}</div>
+       </div>
     </div>
   )
 }

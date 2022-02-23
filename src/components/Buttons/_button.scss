@@ -1,0 +1,134 @@
+$border-radius: 0.5;
+$icon-size: 48px;
+$button-height: 48px;
+
+.button {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+
+  &__label {
+    font-family: $font-body;
+    font-size: 18px;
+    font-weight: $fw-600;
+    color: $primary-color;
+    display: inline-block;
+    padding-right: 1rem;
+    line-height: 1;
+    position: relative;
+    transition: 0.3s;
+  }
+
+  &.button-secondary {
+    .button__label {
+      color: $white;
+    }
+
+    .button__arrow {
+      background-color: $white;
+    }
+  }
+
+  
+}
+.button.button-secondary.icon-expand  {
+    &::before {
+        background-color: $white;
+    }
+
+    &:hover {
+        .button__label {
+            color: $primary-color;
+        }
+    }
+}
+.button.icon-expand {
+    position: relative;
+    height: $button-height;
+    width: fit-content;
+    padding-right: 48px;
+
+
+    &::before {
+      content: "";
+      width: calc(100% + 10px);
+      max-width: $button-height;
+      height: $button-height;
+      border-radius: $button-height;
+      background-color: $primary-color;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transition: 0.5s;
+      transform-origin: right center;
+      z-index: 0;
+    }
+    &:hover {
+      &::before {
+        max-width: calc(100% + 10px) ;
+        transform: translateX(10px);
+      }
+
+      .button__label {
+          color: $white;
+          transform: translateX(20px);
+      }
+
+      .button__arrow {
+        transform: translateX(10px) translateY(-50%);
+      }
+    }
+
+    .button__arrow {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transition: 0.3s;
+        transform: translateY(-50%);
+        background-color: transparent;
+    }
+  }
+
+.button.icon-fill {
+  .button__arrow {
+    width: $button-height;
+    height: $button-height;
+    background-color: white;
+    border-radius: $button-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      transition: 0.5s;
+      border-radius: $icon-size * $border-radius;
+    }
+
+    svg {
+      position: relative;
+      transition: 0.3s;
+    }
+  }
+
+  &:hover, &.is-hover {
+    .button__arrow {
+      svg {
+        fill: $white;
+      }
+
+      &::before {
+        box-shadow: inset 0 0 0 $icon-size $secondary-color;
+      }
+    }
+  }
+}

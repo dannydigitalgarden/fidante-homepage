@@ -17,11 +17,13 @@ export default defineConfig({
     manifest: false,
     rollupOptions: {
       output: {
+       
         entryFileNames: `[name].js`,
         chunkFileNames: `[name].[hash].js`,
-        assetFileNames: `[name].[ext]`
-      }
-    }
+        assetFileNames: `assets/[name].[ext]`,
+        
+      },  
+    },
   },
 })
 

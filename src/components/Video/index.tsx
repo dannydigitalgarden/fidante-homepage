@@ -5,9 +5,11 @@ import './_video.scss';
 
 const Video = () => {
   return (
-    <Player src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"  preload poster="https://images.pexels.com/photos/11191002/pexels-photo-11191002.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+   <div className='fidante-video'> 
+      <Player src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4" poster="https://images.pexels.com/photos/11191002/pexels-photo-11191002.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
         <BigPlayButton position="center" />
     </Player>
+   </div>
   )
 }
 

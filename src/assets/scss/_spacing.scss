@@ -3,7 +3,7 @@
 $space: 1rem;
 
 .container {
-  max-width: $xl3;
+  max-width: $xl5;
   margin: 0 auto;
   display: block;
 }
@@ -26,6 +26,70 @@ $space: 1rem;
 .mx-0 {
   margin-left: 0;
   margin-right: 0;
+}
+
+.padding-left-lg {
+  padding-left: 1rem;
+
+  @include medium {
+    padding-left: 2rem;
+  }
+
+  @include xl {
+    padding-left: 3rem;
+  }
+
+  @include xl5{
+    padding-left: 6.25rem
+  }
+}
+
+.padding-left-xl {
+  padding-left: 1rem;
+
+  @include medium {
+    padding-left: 2rem;
+  }
+
+  @include xl {
+    padding-left: 5.625rem;
+  }
+
+  @include xl5{
+    padding-left: 13.125rem;
+  }
+}
+
+.padding-right-lg {
+  padding-right: 1rem;
+
+  @include medium {
+    padding-right: 2rem;
+  }
+
+  @include xl {
+    padding-right: 3rem;
+  }
+
+  @include xl5{
+    padding-right: 6.25rem;
+  }
+}
+
+.padding-right-xl {
+  padding-right: 1rem;
+
+  @include medium {
+    padding-right: 2rem;
+  }
+
+  @include xl {
+    padding-right: 5.625rem;
+  }
+
+  @include xl5{
+    padding-right: 13.125rem;
+  }
 }
 
 

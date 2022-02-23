@@ -1,0 +1,28 @@
+.statistic {
+    max-width: 500px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__icon {
+        max-width: 72px;
+        max-height: 60px;
+    }
+
+    &__figure {
+        font-size: 78px;
+        font-family: $font-heading;
+        line-height: 1;
+        margin-bottom: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    &__description {
+        font-size: 24px;
+        font-family: $font-body;
+        font-weight: $fw-600;
+        line-height: 1.13;
+    }
+
+}

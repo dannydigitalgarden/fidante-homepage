@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+
+@font-face {
+    font-family: 'Azo Sans Md';
+    src: url('/src/assets/fonts/AzoSans-Medium.woff2') format('woff2'), url('/src/assets/fonts/AzoSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+$font-body: 'Open Sans', sans-serif;
+$font-heading: 'Azo Sans Md';
+
+
+$fw-300: 300;
+$fw-600: 600;
