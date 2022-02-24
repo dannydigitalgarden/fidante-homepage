@@ -39,7 +39,7 @@ $space: 1rem;
     padding-left: 3rem;
   }
 
-  @include xl5{
+  @include xl4{
     padding-left: 6.25rem
   }
 }
@@ -55,7 +55,7 @@ $space: 1rem;
     padding-left: 5.625rem;
   }
 
-  @include xl5{
+  @include xl4{
     padding-left: 13.125rem;
   }
 }
@@ -71,7 +71,7 @@ $space: 1rem;
     padding-right: 3rem;
   }
 
-  @include xl5{
+  @include xl4{
     padding-right: 6.25rem;
   }
 }
@@ -87,7 +87,7 @@ $space: 1rem;
     padding-right: 5.625rem;
   }
 
-  @include xl5{
+  @include xl4{
     padding-right: 13.125rem;
   }
 }

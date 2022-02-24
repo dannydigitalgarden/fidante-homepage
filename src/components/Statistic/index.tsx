@@ -1,7 +1,7 @@
 import React from 'react'
 import './_statistic.scss';
 
-interface StatisticProps {
+export interface StatisticProps {
  icon: string,
  figure: string,
  description: string,
@@ -18,7 +18,7 @@ const Statistic = ({icon, figure, description, backgroundColor, textColor}: Stat
         </div>
        <div className='statistic__info'>
           <div className="statistic__figure">{figure}</div>
-          <div className='statistic__description'>{description}</div>
+          <div className='statistic__description h3'>{description}</div>
        </div>
     </div>
   )

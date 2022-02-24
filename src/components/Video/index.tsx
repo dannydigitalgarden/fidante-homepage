@@ -3,10 +3,15 @@ import { Player, BigPlayButton, LoadingSpinner } from 'video-react';
 import 'video-react/dist/video-react.css';
 import './_video.scss';
 
-const Video = () => {
+interface Props {
+  source: string,
+  poster: string
+}
+
+const Video = ({source, poster}: Props) => {
   return (
    <div className='fidante-video'> 
-      <Player src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4" poster="https://images.pexels.com/photos/11191002/pexels-photo-11191002.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+      <Player src={source} poster={poster} aspectRatio="16:9">
         <BigPlayButton position="center" />
     </Player>
    </div>

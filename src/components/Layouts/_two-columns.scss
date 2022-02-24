@@ -1,16 +1,13 @@
-.two-column-layout {
+.layout-two-columns {
     display: flex;
-    min-height: 525px;
     height: auto;
     align-items: stretch;
-    flex-direction: row-reverse;
+    flex-direction: row;
     background-color: $primary-color;
     color: $white;
 
     &.media-side-right {
-        flex-direction: row;
-
-        .two-column-layout__content {
+        .layout-two-columns__content {
             @extend .padding-left-xl;
             @extend .padding-right-lg;
         }
@@ -22,21 +19,21 @@
     }
 
     &.layout-2-3 {
-        .two-column-layout__content {
+       > div:first-of-type {
             width: 38%;
         }
 
-        .two-column-layout__media{
+       > div:last-of-type{
             width: 62%;
         }
     }
     
     &.layout-3-2 {
-        .two-column-layout__content {
+        > div:first-of-type {
             width: 62%;
         }
 
-        .two-column-layout__media{
+        > div:last-of-type {
             width: 38%;
         }
     }
@@ -45,7 +42,8 @@
         width: 50%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
 
         @extend .padding-left-lg;
         @extend .padding-right-xl;

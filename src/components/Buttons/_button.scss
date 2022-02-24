@@ -100,19 +100,7 @@ $button-height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    overflow: hidden;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      transition: 0.5s;
-      border-radius: $icon-size * $border-radius;
-    }
+    transition: 0.3s;
 
     svg {
       position: relative;
@@ -126,9 +114,7 @@ $button-height: 48px;
         fill: $white;
       }
 
-      &::before {
-        box-shadow: inset 0 0 0 $icon-size $secondary-color;
-      }
+      background-color: $secondary-color;
     }
   }
 }

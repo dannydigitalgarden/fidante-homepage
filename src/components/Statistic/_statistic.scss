@@ -1,5 +1,4 @@
 .statistic {
-    max-width: 500px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -11,15 +10,18 @@
     }
 
     &__figure {
-        font-size: 78px;
+        @include fluid-font(4.85rem, 0.5);
+
         font-family: $font-heading;
         line-height: 1;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
         margin-top: 1.5rem;
+        padding-right: 2.5rem
     }
 
     &__description {
-        font-size: 24px;
+        // @include fluid-font(1.5rem, 0.8);
+
         font-family: $font-body;
         font-weight: $fw-600;
         line-height: 1.13;

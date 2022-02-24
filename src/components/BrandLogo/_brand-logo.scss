@@ -1,0 +1,28 @@
+.brand-logo {
+  display: flex;
+  color: $primary-color;
+  padding: 2rem;
+
+  &__info {
+    width: 65%;
+    padding-right: 3rem;
+  }
+
+  &__image {
+    width: 35%;
+
+    img {
+      height: auto;
+      max-height: 120px;
+      object-fit: contain;
+      filter: grayscale(1);
+      transition: 0.3s;
+    }
+  }
+
+  &:hover {
+    img {
+      filter: grayscale(0);
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.our-managers {
+    height: 100vh;
+    color: white;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @extend .padding-t-9;
+
+    &__title {
+        @extend .padding-left-xl;
+        @extend .padding-right-lg;
+        @extend .margin-b-7;
+
+        h1 {
+            margin-bottom: 0;
+        }
+    }
+}

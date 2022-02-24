@@ -1,0 +1,14 @@
+.spotlight {
+    &__logos-listing {
+        background-color: white;
+
+        .brand-logo {
+            background-color: $white;
+            transition: 0.3s;
+            &:hover {
+                background-color: $grey-1;
+            }
+        }
+    }
+    
+}

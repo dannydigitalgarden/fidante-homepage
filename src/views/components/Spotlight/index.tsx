@@ -1,0 +1,42 @@
+import React from "react";
+import TwoColumns, { TwoColumnsContent, TwoColumnsMedia } from "components/Layouts/TwoColumns";
+import Button from "components/Buttons";
+import BrandLogo from "components/BrandLogo";
+import "./_spotlight.scss";
+import { BrandLogos } from "../../../components/BrandLogo/index";
+
+interface Props {
+  title: string;
+  url?: string;
+  intro?: string;
+  brandLogos: BrandLogos[];
+}
+
+const Spotlight = ({ title, intro, url, brandLogos }: Props) => {
+  return (
+    <div className="spotlight">
+      <TwoColumns options={{ mediaSide: "right" }}>
+        <TwoColumnsContent>
+          <div className="spotlight__content">
+            <div className="spotlight__heading">
+              <h2>{title}</h2>
+            </div>
+            {intro && <div className="spotlight__intro margin-b-2" dangerouslySetInnerHTML={{ __html: intro }}></div>}
+            {url && <Button url={url} label="View all funds" type="secondary" />}
+          </div>
+        </TwoColumnsContent>
+        <TwoColumnsMedia>
+          {brandLogos?.length > 0 && (
+            <div className="spotlight__logos-listing">
+              {brandLogos.map((brand) => (
+                <BrandLogo {...brand} key={brand.name} />
+              ))}
+            </div>
+          )}
+        </TwoColumnsMedia>
+      </TwoColumns>
+    </div>
+  );
+};
+
+export default Spotlight;
