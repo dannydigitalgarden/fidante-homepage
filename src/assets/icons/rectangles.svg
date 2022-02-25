@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="287px" height="359px" viewBox="0 0 287 359" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 23</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="162" height="215"></rect>
+    </defs>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-23">
+            <g id="jean-philippe-delberghe-75xPHEQBmvA-unsplash" fill="#226257">
+                <polygon id="Rectangle" points="76.1339384 82.0875838 286 82 286 359 75 359"></polygon>
+            </g>
+            <g id="lower-shape" transform="translate(124.000000, 144.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#C3C6C8" xlink:href="#path-1"></use>
+                <polygon id="Rectangle" fill="#226257" mask="url(#mask-2)" points="74.8492996 92.2944462 162 92 162 215 74.8492996 217.018203"></polygon>
+            </g>
+            <polygon id="Path-19" fill-opacity="0.2" fill="#226257" points="23 24 23 359 75 359 78 82 287 81.2241993 287 24"></polygon>
+            <polygon id="Path-19" fill-opacity="0.2" fill="#226257" points="143 174 143 359 198.348837 359 198.348837 236.064516 286 236 286 174"></polygon>
+            <polygon id="Path-20" fill-opacity="0.4" fill="#226257" points="50 55.3336992 50 359 76.7969925 359 77 82 286 82 286 55"></polygon>
+            <polygon id="Path-19" fill-opacity="0.4" fill="#226257" points="164 203 164 359 198.768212 359 198.768212 236.343511 286 236 286 203"></polygon>
+        </g>
+    </g>
+</svg>

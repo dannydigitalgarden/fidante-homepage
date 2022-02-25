@@ -1,0 +1,196 @@
+.fidante-theme {
+  $fidante-theme-primary: #fcb315;
+  $fidante-theme-secondary: #fff;
+
+  .vjs-poster {
+    background-size: cover;
+  }
+
+  &:hover .vjs-big-play-button,
+  .video-js .vjs-big-play-button:focus {
+    border-color: #fff;
+    background-color:  $fidante-theme-primary;
+    transition: all 0.3s;
+  }
+
+  .vjs-big-play-button {
+    width: 79px;
+    height: 79px;
+    background-color: rgb(252, 179, 21, 0.9);
+    border: none;
+    line-height: 79px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    margin-top: -51.5px;
+    margin-left: -39.5px;
+    box-shadow: 0 0 0 rgb(252, 179, 21, 0.9);
+    animation: pulse 1.5s infinite;
+    transition: 0.3s;
+
+    &::before {
+      top: 50%;
+      transform: translateY(-25%);
+      z-index: 1;
+    }
+  }
+
+  /* Because of the SVG inliner, these don't work for icons */
+
+  .vjs-big-play-button .vjs-icon-placeholder {
+    display: block;
+  }
+
+  /* Control Bar */
+  .vjs-button > .vjs-icon-placeholder::before {
+    line-height: 1.55;
+  }
+
+  .vjs-control:not(.vjs-disabled, .vjs-time-control):hover {
+    color: $fidante-theme-primary;
+    text-shadow: $fidante-theme-secondary 1px 0 10px;
+  }
+
+  .vjs-control-bar {
+    background: none;
+    margin-bottom: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  /* Play Button */
+  .vjs-play-control {
+    font-size: 0.8em;
+  }
+
+  .vjs-play-control .vjs-icon-placeholder:before {
+    background-color: $fidante-theme-secondary;
+    height: 1.5em;
+    width: 1.5em;
+    margin-top: 0.2em;
+    border-radius: 1em;
+    color: $fidante-theme-primary;
+  }
+
+  .vjs-play-control:hover .vjs-icon-placeholder:before {
+    background-color: $fidante-theme-primary;
+    color: $fidante-theme-secondary;
+  }
+
+  /* Volume stuff */
+  .vjs-mute-control {
+    display: none;
+  }
+
+  .vjs-volume-panel {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding-top: 0.3em;
+  }
+
+  .vjs-volume-panel,
+  .vjs-volume-panel:hover,
+  .vjs-volume-panel:hover .vjs-volume-control.vjs-volume-horizontal,
+  .vjs-volume-panel:active .vjs-volume-control.vjs-volume-horizontal,
+  .vjs-volume-panel.vjs-volume-panel-horizontal:hover,
+  .vjs-volume-panel.vjs-volume-panel-horizontal.vjs-slider-active,
+  .vjs-volume-bar.vjs-slider-horizontal {
+    width: 3em;
+  }
+
+  .vjs-volume-level::before {
+    font-size: 1em;
+  }
+
+  .vjs-volume-panel .vjs-volume-control {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .vjs-volume-bar {
+    background-color: transparent;
+    margin: 0;
+  }
+
+  .vjs-slider-horizontal .vjs-volume-level {
+    height: 100%;
+  }
+
+  .vjs-volume-bar.vjs-slider-horizontal {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100%;
+  }
+
+  .vjs-volume-bar::before {
+    content: "";
+    z-index: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0px;
+    left: 0;
+
+    border-style: solid;
+    border-width: 0 0 2em 3em;
+    border-color: transparent transparent $fidante-theme-primary transparent;
+  }
+
+  .vjs-volume-level {
+    overflow: hidden;
+    background-color: transparent;
+  }
+
+  .vjs-volume-level::before {
+    content: "";
+    z-index: 1;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border-style: solid;
+    border-width: 0 0 2em 3em;
+    border-color: transparent transparent $fidante-theme-secondary transparent;
+  }
+
+  /* Progress Bar */
+  .vjs-progress-control:hover .vjs-progress-holder {
+    font-size: 1em;
+  }
+
+  .vjs-play-progress {
+    background-color: #fcb315;
+  }
+
+  .vjs-play-progress::before {
+    display: none;
+  }
+
+  .vjs-progress-holder {
+    border-radius: 0.2em;
+    height: 0.5em;
+    margin: 0;
+  }
+
+  .vjs-play-progress,
+  .vjs-load-progress,
+  .vjs-load-progress div {
+    border-radius: 0.2em;
+  }
+
+  .vjs-load-progress div {
+    background-color: #fff;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(255, 196, 0, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 196, 0, 0);
+  }
+}

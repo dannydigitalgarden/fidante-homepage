@@ -1,23 +1,30 @@
 .why-fidante {
   .layout-two-columns__content {
-    width: 55%;
+    width: 100%;
+    @include large {
+      width: 55%;
+    }
   }
   .layout-two-columns__media {
-    width: 45%;
+    width: 100%;
+    @include large {
+      width: 45%;
+    }
   }
   &__stats {
     display: flex;
-    // align-items: center;
 
     .column-left {
       width: 58%;
-      margin-top: -1rem;
-      margin-bottom: -1rem;
       z-index: 1;
+
+      @include large {
+        margin-top: -1rem;
+       margin-bottom: -1rem;
+      }
 
       .statistic {
         height: 50%;
-        min-height: 395px;
       }
     }
 
@@ -25,7 +32,7 @@
       width: 42%;
 
       .statistic {
-        min-height: 250px;
+        min-height: 200px;
 
         &:not(:last-of-type) {
           border-bottom: 1px solid rgba(152, 164, 175, 0.4);

@@ -2,6 +2,7 @@ import React from "react";
 import Button from "components/Buttons";
 import TwoColumnsLayout, { TwoColumnsContent, TwoColumnsMedia } from "components/Layouts/TwoColumns";
 import "./_hero-banner.scss";
+import Rectangle from "./Rectangle";
 
 interface PanelProps {
   data: {
@@ -27,6 +28,9 @@ const HeroBanner = ({ data }: PanelProps) => {
           </div>
         </TwoColumnsContent>
         <TwoColumnsMedia>
+          <div className="rectangle">
+           <Rectangle />
+          </div>
           <div className="hero-banner__media">
             {data.mediaType === "image" && <img src={data.mediaSource} alt={data.title} />}
 

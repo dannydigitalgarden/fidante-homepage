@@ -9,10 +9,10 @@ interface Props {
   title: string;
   url?: string;
   intro?: string;
-  brandLogos: BrandLogos[];
+  brands: BrandLogos[];
 }
 
-const Spotlight = ({ title, intro, url, brandLogos }: Props) => {
+const Spotlight = ({ title, intro, url, brands }: Props) => {
   return (
     <div className="spotlight">
       <TwoColumns options={{ mediaSide: "right" }}>
@@ -26,10 +26,10 @@ const Spotlight = ({ title, intro, url, brandLogos }: Props) => {
           </div>
         </TwoColumnsContent>
         <TwoColumnsMedia>
-          {brandLogos?.length > 0 && (
+          {brands?.length > 0 && (
             <div className="spotlight__logos-listing">
-              {brandLogos.map((brand) => (
-                <BrandLogo {...brand} key={brand.name} />
+              {brands.map((brand) => (
+                <BrandLogo {...brand} showInfo={true} key={brand.name} />
               ))}
             </div>
           )}

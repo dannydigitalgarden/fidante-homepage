@@ -3,20 +3,44 @@
   color: $primary-color;
   padding: 2rem;
 
-  &__info {
-    width: 65%;
-    padding-right: 3rem;
+  &.show-info {
+    .brand-logo__info {
+      width: 65%;
+      padding-right: 3rem;
+    }
+  
+    .brand-logo__image {
+      width: 35%;
+  
+      img {
+       
+       @include xl {
+        max-height: 120px;
+        max-width: 250px;
+       }
+
+        @include xl4 {
+          min-height: 85px;
+        }
+      }
+    }
   }
 
+
   &__image {
-    width: 35%;
+    width: 100%;
 
     img {
       height: auto;
-      max-height: 120px;
+     
       object-fit: contain;
       filter: grayscale(1);
       transition: 0.3s;
+
+      @include xl {
+        max-height: 55px;
+        max-width: 140px;
+      }
     }
   }
 

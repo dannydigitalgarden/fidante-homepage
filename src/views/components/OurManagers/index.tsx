@@ -1,23 +1,29 @@
-import React from 'react'
-import './_our-managers.scss'
+import React from "react";
+import LogoListing from "./LogoListing";
+import "./_our-managers.scss";
 
 interface Props {
-
+  title: string;
+  backgroundImage: string;
+  logos: Array<any>;
 }
 
-const bg= "https://images.pexels.com/photos/5714375/pexels-photo-5714375.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-
-const OurManagers = () => {
+const OurManagers = ({ title, backgroundImage, logos }: Props) => {
   return (
-    <div className='our-managers' style={{backgroundImage: `url(${bg})`}}>
-        <div className="our-managers__title">
-            <h1>Our Managers</h1>
-        </div>
-        <div className="our-managers__logos-listing">
-            Logo listing
-        </div>
-    </div>
-  )
-}
+    <div className="our-managers" style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <div className="our-managers__title">
+        <h1>{title}</h1>
+      </div>
 
-export default OurManagers
+      {logos?.length > 0 && (
+        <div className="our-managers__logos-listing">
+          {logos.map((logo) => (
+            <LogoListing {...logo} key={logo.category} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default OurManagers;

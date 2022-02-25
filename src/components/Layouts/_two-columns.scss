@@ -2,9 +2,13 @@
     display: flex;
     height: auto;
     align-items: stretch;
-    flex-direction: row;
+    flex-direction: column;
     background-color: $primary-color;
     color: $white;
+
+    @include large {
+        flex-direction: row
+    }
 
     &.media-side-right {
         .layout-two-columns__content {
@@ -19,16 +23,19 @@
     }
 
     &.layout-2-3 {
-       > div:first-of-type {
+      @include large {
+        > div:first-of-type {
             width: 38%;
         }
 
        > div:last-of-type{
             width: 62%;
         }
+      }
     }
     
     &.layout-3-2 {
+       @include large {
         > div:first-of-type {
             width: 62%;
         }
@@ -36,20 +43,28 @@
         > div:last-of-type {
             width: 38%;
         }
+       }
     }
     
     &__content {
-        width: 50%;
+         width: 100%;
         display: flex;
         align-items: center;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
 
         @extend .padding-left-lg;
         @extend .padding-right-xl;
+
+        @include xl {
+            width: 50%;
+        }
     }
 
     &__media {
-        width: 50%;
+        width: 100%;
+        @include xl {
+            width: 50%;
+        }
     }
 }

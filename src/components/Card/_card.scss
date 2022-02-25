@@ -14,8 +14,10 @@
         }
 
         .card__intro {
+           @include xl2 {
             opacity: 1;
             visibility: visible;
+           }
         }
 
     }
