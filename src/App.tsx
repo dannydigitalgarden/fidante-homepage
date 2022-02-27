@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import logo from './logo.svg'
 import './App.scss'
 import Homepage from 'views/Homepage'
 

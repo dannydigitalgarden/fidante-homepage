@@ -5,13 +5,13 @@ import WhyFidante from "./components/WhyFidante";
 import OurManagers from "./components/OurManagers";
 import Spotlight from "./components/Spotlight";
 import LatestInsights from "./components/LatestInsights";
-
 //icons
 import icon1 from 'assets/icons/icon-1.svg'
 import icon2 from 'assets/icons/icon-2.svg'
 import icon3 from 'assets/icons/icon-3.svg'
 import icon4 from 'assets/icons/icon-4.svg'
 import icon5 from 'assets/icons/icon-5.svg'
+
 
 
 const bannerdata = {
