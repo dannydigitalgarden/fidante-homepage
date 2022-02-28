@@ -20,7 +20,7 @@ const Card = ({ title, intro, image, url }: InsightCard) => {
       <a className="card__link" href={url}>
         <div className="card__overlay"></div>
         <div className="card__info">
-          <div className="h3 card__title">{title}</div>
+          <div className="card__title">{title}</div>
           <div className="card__intro text-intro">{intro}</div>
         </div>
       </a>

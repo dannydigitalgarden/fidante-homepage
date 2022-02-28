@@ -17,8 +17,11 @@
     }
 }
 
-.logo-listing {
+
+
+.logo-listing{
     display: flex;
+
 
     &__category {
         padding-left: 3rem;
@@ -35,12 +38,19 @@
     &__items {
         flex: 1;
         display: flex;
-        flex-wrap: wrap;
+        overflow-x: auto;
+        // scrollbar-width: 0;
+
+        // &::-webkit-scrollbar {
+        //     display: none;
+        //   }
        
         .brand-logo {
             background-color: rgba(255, 255, 255, 0.9);
             padding-top: 3rem;
             padding-bottom: 3rem;
+            min-width: 220px;
+            max-width: 220px;
             .brand-logo__image {
                 display: flex;
                 align-items: center;

@@ -21,7 +21,7 @@ const Spotlight = ({ title, intro, url, brands }: Props) => {
             <div className="spotlight__heading">
               <h2>{title}</h2>
             </div>
-            {intro && <div className="spotlight__intro margin-b-2" dangerouslySetInnerHTML={{ __html: intro }}></div>}
+            {intro && <div className="spotlight__intro margin-b-2 text-intro" dangerouslySetInnerHTML={{ __html: intro }}></div>}
             {url && <Button url={url} label="View all funds" type="secondary" />}
           </div>
         </TwoColumnsContent>

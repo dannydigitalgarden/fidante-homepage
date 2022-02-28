@@ -1,7 +1,23 @@
 .feature-video-panel {
     .layout-two-columns{
+        
         @include up-to-large {
             flex-direction: column-reverse;
+        }
+
+        .layout-two-columns__media {
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            @include medium {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+
+            @include large {
+                padding-left: 0;
+                padding-right: 0;
+            }
         }
     }
     &__title {

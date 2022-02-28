@@ -15,17 +15,17 @@ import icon5 from 'assets/icons/icon-5.svg'
 
 
 const bannerdata = {
-  title: "Excellence in investment management",
+  title: "<h1><span class='highlight'>Excellence</span> in investment management</h1>",
   intro: "Fidante Partners forms long term alliances with talented investment teams to support and grow specialist investment management businesses.",
   mediaType: "image",
-  mediaSource: "https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+  mediaSource: "https://images.pexels.com/photos/566305/pexels-photo-566305.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
   url: "#",
 };
 
 const videoPanel = {
   title: "At Fidante Partners, active investing is at the heart of what we do.",
   videoSource: "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4",
-  poster: "https://images.pexels.com/photos/6238608/pexels-photo-6238608.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+  poster: "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
 };
 
 const whyFidante = {
@@ -166,13 +166,13 @@ const latestInsights = {
       url: "#"
     },
     {
-      title: "Fed ‘Policy Normalisation’ Or a New Bear Market?",
+      title: "Foundations for global net zero: An investor’s reflections on COP26",
       intro: "While this year is only a few weeks old, the key theme in markets already appears to be well established.",
       image: "https://images.pexels.com/photos/11218623/pexels-photo-11218623.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       url: "#"
     },
     {
-      title: "Fed ‘Policy Normalisation’ Or a New Bear Market?",
+      title: "Greening the Real Economy: An Investor's Perspective on COP26",
       intro: "While this year is only a few weeks old, the key theme in markets already appears to be well established.",
       image: "https://images.pexels.com/photos/11218623/pexels-photo-11218623.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       url: "#"

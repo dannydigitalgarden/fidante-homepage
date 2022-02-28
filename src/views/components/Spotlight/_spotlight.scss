@@ -8,6 +8,16 @@
             &:hover {
                 background-color: $grey-1;
             }
+
+            .brand-logo__image {
+                @include xl2 {
+                    padding-right: 2rem;
+                }
+
+                @include xl4 {
+                    padding-right: 5rem;
+                }
+            }
         }
     }
     

@@ -16,7 +16,7 @@ const OurManagers = ({ title, backgroundImage, logos }: Props) => {
       </div>
 
       {logos?.length > 0 && (
-        <div className="our-managers__logos-listing">
+        <div className="our-managers__logos-listing-wrapper">
           {logos.map((logo) => (
             <LogoListing {...logo} key={logo.category} />
           ))}

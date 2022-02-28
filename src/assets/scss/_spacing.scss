@@ -64,15 +64,15 @@ $space: 1rem;
   padding-right: 1rem;
 
   @include medium {
-    padding-right: 2rem;
-  }
-
-  @include xl {
     padding-right: 3rem;
   }
 
+  @include xl {
+    padding-right: 5.625rem;
+  }
+
   @include xl4{
-    padding-right: 6.25rem;
+    padding-right: 8rem;
   }
 }
 
@@ -80,7 +80,7 @@ $space: 1rem;
   padding-right: 1rem;
 
   @include medium {
-    padding-right: 2rem;
+    padding-right: 3rem;
   }
 
   @include xl {

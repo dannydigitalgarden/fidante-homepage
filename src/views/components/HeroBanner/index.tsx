@@ -20,10 +20,8 @@ const HeroBanner = ({ data }: PanelProps) => {
       <TwoColumnsLayout options={{ mediaSide: "right" }}>
         <TwoColumnsContent>
           <div className="hero-banner__content">
-            <div className="hero-banner__heading">
-              <h1>{data.title}</h1>
-            </div>
-            {data.intro && <div className="hero-banner__intro margin-b-2" dangerouslySetInnerHTML={{ __html: data.intro }}></div>}
+            <div className="hero-banner__heading h1" dangerouslySetInnerHTML={{ __html: data.title }}></div>
+            {data.intro && <div className="hero-banner__intro text-intro margin-b-2" dangerouslySetInnerHTML={{ __html: data.intro }}></div>}
             {data.url && <Button url={data.url} label="Learn more" type="secondary" />}
           </div>
         </TwoColumnsContent>

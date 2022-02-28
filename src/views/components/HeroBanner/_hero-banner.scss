@@ -62,4 +62,20 @@
       object-fit: cover;
     }
   }
+
+  &__heading {
+    h2,h3,h4,h5,h6 {
+      @extend .h1
+    }
+
+    .highlight {
+      color: $accent-color;
+    }
+  }
+
+  &__intro {
+    @include xl {
+      max-width: 536px;
+    }
+  }
 }

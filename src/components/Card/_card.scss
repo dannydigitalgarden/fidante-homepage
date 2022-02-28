@@ -1,83 +1,92 @@
 .card {
-    position: relative;
-    aspect-ratio: 376/390;
-    max-width: 500px;
-    overflow: hidden;
+  position: relative;
+  aspect-ratio: 376/390;
+  overflow: hidden;
+  padding: 1rem;
+
+  @include xl3 {
     padding: 2rem;
+  }
 
-    &:hover{
-        .card__overlay {
-            background-color: $white;
-        }
-        .card__title {
-            color: $primary-color;
-        }
-
-        .card__intro {
-           @include xl2 {
-            opacity: 1;
-            visibility: visible;
-           }
-        }
-
-    }
-
-    &__image {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        filter: grayscale(1);
-    }
-
-    &__overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        background-color: rgba(34, 98, 87, 0.5);
-        z-index: 0;
-        transition: 0.5s;
-        
-    }
-
-    &__info {
-        position: relative;
-        z-index: 1;
-    }
-
-    &__title.h3{
-        line-height: 1.3;
-        color: $white;
-        transition: 0.3s;
-        margin-bottom: 10px;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;  
-        overflow: hidden;
-    }
-
-    &__intro {
+  @media (hover: hover) {
+    &:hover {
+      .card__overlay {
+        background-color: $white;
+      }
+      .card__title {
         color: $primary-color;
-        transition: 0.5s;
-        opacity: 0;
-        visibility: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;  
-        overflow: hidden;
-    }
+      }
 
-    &__button {
-        position: absolute;
-        bottom: 2rem;
-        right: 2rem;
-        z-index: 1;
+      .card__intro {
+        opacity: 1;
+        visibility: visible;
+      }
     }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(1);
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(34, 98, 87, 0.5);
+    z-index: 0;
+    transition: 0.5s;
+  }
+
+  &__info {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    line-height: 1.3;
+    color: $white;
+    transition: 0.3s;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-family: $font-heading;
+
+    @include fluid-font(1.5rem, 0.8333);
+  }
+
+  &__intro {
+    color: $primary-color;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1;
+
+    @include xl3 {
+      bottom: 2rem;
+      right: 2rem;
+    }
+  }
 }

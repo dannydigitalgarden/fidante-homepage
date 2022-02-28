@@ -59,6 +59,10 @@
         @include xl {
             width: 50%;
         }
+
+        p:last-of-type {
+            margin-bottom: 0;
+        }
     }
 
     &__media {

@@ -26,7 +26,7 @@ const WhyFidante = ({ title, intro, url, statistics }: Props) => {
             <div className="why-fidante__heading">
               <h2>{title}</h2>
             </div>
-            {intro && <div className="why-fidante__intro margin-b-2" dangerouslySetInnerHTML={{ __html: intro }}></div>}
+            {intro && <div className="why-fidante__intro text-intro margin-b-2" dangerouslySetInnerHTML={{ __html: intro }}></div>}
             {url && <Button url={url} label="Learn more" type="primary" />}
           </div>
         </TwoColumnsContent>
