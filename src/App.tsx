@@ -1,13 +1,22 @@
-import { useState } from 'react'
+import React, {useEffect, useState} from 'react'
+import Homepage, {HomepageProps} from 'views/Homepage'
 import './App.scss'
-import Homepage from 'views/Homepage'
+import mockdata from './api/mockData'
+import LoadingSpinner from 'components/LoadingSpinner'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
+  const [data, setData] = useState<HomepageProps | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(true)
+  useEffect(() => {
+    setTimeout(() => {
+      setData(mockdata);
+      setIsLoading(false)
+    }, 3000)
+  })
   return (
-    <div className="App">
-      <Homepage />
+    <div className="fidante-app">
+      {data && !isLoading && <Homepage {...data} />}
+      <LoadingSpinner isLoading={isLoading}/>
     </div>
   )
 }

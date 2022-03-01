@@ -1,14 +1,14 @@
 import React from "react";
 import LogoListing from "./LogoListing";
-import "./_our-managers.scss";
+import './_our-managers.scss'
 
-interface Props {
+export interface OurManagersProps {
   title: string;
   backgroundImage: string;
   logos: Array<any>;
 }
 
-const OurManagers = ({ title, backgroundImage, logos }: Props) => {
+const OurManagers = ({ title, backgroundImage, logos }: OurManagersProps) => {
   return (
     <div className="our-managers" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className="our-managers__title">

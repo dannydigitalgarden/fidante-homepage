@@ -1,24 +1,66 @@
 .spotlight {
-    &__logos-listing {
-        background-color: white;
+  .layout-two-columns__content {
+    .squares {
+      top: -5px;
+      right: -20%;
+      height: 110%;
+      max-height: none;
 
-        .brand-logo {
-            background-color: $white;
-            transition: 0.3s;
-            &:hover {
-                background-color: $grey-1;
-            }
+      svg {
+        width: auto;
+        height: 100%;
+      }
 
-            .brand-logo__image {
-                @include xl2 {
-                    padding-right: 2rem;
-                }
+      @include small-medium {
+        right: 0;
+      }
 
-                @include xl4 {
-                    padding-right: 5rem;
-                }
-            }
+      @include large {
+        right: -40%;
+      }
+
+      @include xl {
+        svg {
+          height: 110%;
         }
+        right: -10%;
+      }
+
+      @include xl3 {
+        right: -5px;
+      }
     }
-    
+  }
+  .layout-two-columns__media {
+    padding: 0 1rem 1rem 1rem;
+
+    @include medium {
+      padding: 0 2rem 2rem 2rem;
+    }
+
+    @include large {
+      padding: 0;
+    }
+  }
+  &__logos-listing {
+    background-color: white;
+
+    .brand-logo {
+      background-color: $white;
+      transition: 0.3s;
+      &:hover {
+        background-color: $grey-1;
+      }
+
+      .brand-logo__image {
+        @include xl2 {
+          padding-right: 2rem;
+        }
+
+        @include xl4 {
+          padding-right: 5rem;
+        }
+      }
+    }
+  }
 }

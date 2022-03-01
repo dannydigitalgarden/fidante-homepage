@@ -4,19 +4,21 @@ import Button from "components/Buttons";
 import BrandLogo from "components/BrandLogo";
 import "./_spotlight.scss";
 import { BrandLogos } from "../../../components/BrandLogo/index";
+import { SquareThree } from "components/Squares";
 
-interface Props {
+export interface SpotlightProps {
   title: string;
   url?: string;
   intro?: string;
   brands: BrandLogos[];
 }
 
-const Spotlight = ({ title, intro, url, brands }: Props) => {
+const Spotlight = ({ title, intro, url, brands }: SpotlightProps) => {
   return (
     <div className="spotlight">
       <TwoColumns options={{ mediaSide: "right" }}>
         <TwoColumnsContent>
+          <div className="squares"> <SquareThree /></div>
           <div className="spotlight__content">
             <div className="spotlight__heading">
               <h2>{title}</h2>

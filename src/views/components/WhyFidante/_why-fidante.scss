@@ -4,6 +4,20 @@
     @include large {
       width: 55%;
     }
+
+    .squares {
+      top: 0;
+      left: 0;
+      width: 50%;
+      max-width: 250px;
+
+      @include large {
+        width: 37%;
+        max-width: 400px;
+      }
+      
+     }
+
   }
   .layout-two-columns__media {
     width: 100%;

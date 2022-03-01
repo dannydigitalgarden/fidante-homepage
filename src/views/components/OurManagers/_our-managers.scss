@@ -4,7 +4,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    @extend .padding-t-9;
+    @extend .padding-t-10;
 
     &__title {
         @extend .padding-left-xl;
@@ -21,14 +21,37 @@
 
 .logo-listing{
     display: flex;
-
+    position: relative;
+    &.is-overflow {
+        &::after {
+            content: '';
+            display: block;
+            width: 3rem;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-image: linear-gradient(to right,rgba(255,255,255,0),#fff 80%);
+            z-index: 1;
+            pointer-events: none;
+        }
+    }
 
     &__category {
-        padding-left: 3rem;
-        padding-right: 2rem;
-        width: 250px;
-        display: flex;
-        align-items: center;
+        padding: 2rem 1rem 2rem 1rem;
+        width: 130px;
+       
+
+
+        @include large {
+           width: 180px;
+        }
+
+        @include xl2 {
+            display: flex;
+            align-items: center;
+            width: 250px;
+        }
         h3 {
             line-height: 1.29;
             margin-bottom: 0;
@@ -39,24 +62,76 @@
         flex: 1;
         display: flex;
         overflow-x: auto;
-        // scrollbar-width: 0;
+        scrollbar-width: 0;
+        padding-left: 1rem;
+        position: relative;
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
-        // &::-webkit-scrollbar {
-        //     display: none;
-        //   }
+        &.is-overflow {
+            .brand-logo {
+                &:last-of-type {
+                    padding-right: 3rem;
+                    width: 140px;
+                }
+            }
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 1rem;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        @include small-medium {
+            flex-wrap: wrap;
+            overflow-x: hidden;
+        }
+
+        @include xl3 {
+            padding-left: 3rem;
+
+            &::before {
+                width: 3rem;
+            }
+        }
        
         .brand-logo {
             background-color: rgba(255, 255, 255, 0.9);
-            padding-top: 3rem;
-            padding-bottom: 3rem;
-            min-width: 220px;
-            max-width: 220px;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            height: 120px;
+            width: 120px;
+            flex-shrink: 0;
+            padding-right: 1.5rem;
+            padding-left: 0rem;
+
+            
+
+            @include large {
+                width: 140px;
+                height: 120px;
+                padding-right: 2rem;
+            }
+
+            @include xl2 {
+                width: 160px;
+                height: 160px;
+            }
+
+            @include xl4 {
+                width: 200px;
+            }
+
             .brand-logo__image {
                 display: flex;
                 align-items: center;
-            }
-            &:first-of-type {
-                padding-left: 3rem;
             }
         }
     }

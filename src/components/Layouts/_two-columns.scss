@@ -52,6 +52,8 @@
         align-items: center;
         padding-top: 6rem;
         padding-bottom: 6rem;
+        position: relative;
+        overflow: hidden;
 
         @extend .padding-left-lg;
         @extend .padding-right-xl;
@@ -62,6 +64,19 @@
 
         p:last-of-type {
             margin-bottom: 0;
+        }
+
+        .squares {
+            position: absolute;
+            max-width: 100%;
+            max-height: 100%;
+            z-index: 0;
+            pointer-events: none;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 

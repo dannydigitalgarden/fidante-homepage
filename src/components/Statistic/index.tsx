@@ -8,9 +8,10 @@ export interface StatisticProps {
   description: string;
   backgroundColor: string;
   textColor: string;
+  url: string;
 }
 
-const Statistic = ({ icon, figure, description, backgroundColor, textColor }: StatisticProps) => {
+const Statistic = ({ icon, figure, description, backgroundColor, textColor, url }: StatisticProps) => {
   const [isInjectedSvg, setIsInjectedSvg] = useState(false);
   const iconRef = useRef() as MutableRefObject<HTMLDivElement>;
 
@@ -39,7 +40,7 @@ const Statistic = ({ icon, figure, description, backgroundColor, textColor }: St
     }
   }, [isInjectedSvg]);
   return (
-    <div className="statistic" style={{ backgroundColor: backgroundColor, color: textColor }}>
+    <a href={url} className="statistic" style={{ backgroundColor: backgroundColor, color: textColor }}>
       <div className="statistic__icon" ref={iconRef}>
         <ReactSVG
           afterInjection={(error, svg) => {
@@ -55,7 +56,7 @@ const Statistic = ({ icon, figure, description, backgroundColor, textColor }: St
         <div className="statistic__figure">{figure}</div>
         <div className="statistic__description h3">{description}</div>
       </div>
-    </div>
+    </a>
   );
 };
 

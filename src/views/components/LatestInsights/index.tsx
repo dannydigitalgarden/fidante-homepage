@@ -1,20 +1,21 @@
-import React, { useEffect, useState } from "react";
+
 import Card, { InsightCard } from "components/Card";
 import TwoColumns, { TwoColumnsContent, TwoColumnsMedia } from "components/Layouts/TwoColumns";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import useWindowSize from "../../../hooks/useWindowSize";
 import "swiper/css";
 import "./_latest-insights.scss";
+import { SquareFour } from '../../../components/Squares/index';
 
-interface Props {
+export interface LatestInsightsProps {
   title: string;
   articles: InsightCard[];
 }
 
-const LatestInsights = ({ title, articles }: Props) => {
+const LatestInsights = ({ title, articles }: LatestInsightsProps) => {
 
   return (
     <div className="latest-insights">
+       <div className="squares"><SquareFour /></div>
       <TwoColumns options={{ backgroundColor: "light", mediaSide: "right", layoutType: "layout-2-3" }}>
         <TwoColumnsContent>
           <div className="latest-insights__heading">
@@ -25,20 +26,36 @@ const LatestInsights = ({ title, articles }: Props) => {
           {articles?.length > 0 && (
             <div className="latest-insights__listing">
               <Swiper
+                centeredSlides={true}
+                centeredSlidesBounds={true}
                 slidesPerView={1.2}
                 breakpoints={{
                   650: {
-                    slidesPerView: 2.5,
+                    slidesPerView: 2.2,
                     spaceBetween: 20,
+                    centeredSlides:false,
+                    centeredSlidesBounds: false,
                   },
 
                   768: {
-                    slidesPerView: 3,
+                    centeredSlides:false,
+                    centeredSlidesBounds: false,
+                    slidesPerView: 2.2,
                     spaceBetween: 20,
                   },
+                  960: {
+                    centeredSlides:false,
+                    centeredSlidesBounds: false,
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                    enabled: false
+                  },
                   1500: {
+                    centeredSlides:false,
+                    centeredSlidesBounds: false,
                     slidesPerView: 3,
                     spaceBetween: 40,
+                    enabled: false
                   }
                 }}
                 spaceBetween={10}

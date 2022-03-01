@@ -4,25 +4,23 @@ import TwoColumnsLayout, { TwoColumnsContent, TwoColumnsMedia } from "components
 import "./_hero-banner.scss";
 import Rectangle from "./Rectangle";
 
-interface PanelProps {
-  data: {
+export interface HeroBannerProps {
     mediaType: string;
     mediaSource: string;
     title: string;
     intro: string;
     url: string;
-  };
 }
 
-const HeroBanner = ({ data }: PanelProps) => {
+const HeroBanner = ({  mediaType, mediaSource, title, intro, url }: HeroBannerProps) => {
   return (
     <div className="hero-banner">
       <TwoColumnsLayout options={{ mediaSide: "right" }}>
         <TwoColumnsContent>
           <div className="hero-banner__content">
-            <div className="hero-banner__heading h1" dangerouslySetInnerHTML={{ __html: data.title }}></div>
-            {data.intro && <div className="hero-banner__intro text-intro margin-b-2" dangerouslySetInnerHTML={{ __html: data.intro }}></div>}
-            {data.url && <Button url={data.url} label="Learn more" type="secondary" />}
+            <div className="hero-banner__heading h1" dangerouslySetInnerHTML={{ __html: title }}></div>
+            {intro && <div className="hero-banner__intro text-intro margin-b-2" dangerouslySetInnerHTML={{ __html: intro }}></div>}
+            {url && <Button url={url} label="Learn more" type="secondary" />}
           </div>
         </TwoColumnsContent>
         <TwoColumnsMedia>
@@ -30,9 +28,9 @@ const HeroBanner = ({ data }: PanelProps) => {
            <Rectangle />
           </div>
           <div className="hero-banner__media">
-            {data.mediaType === "image" && <img src={data.mediaSource} alt={data.title} />}
+            {mediaType === "image" && <img src={mediaSource} alt={title} />}
 
-            {data.mediaType === "video" && <video src={data.mediaSource} autoPlay muted controls={false} loop />}
+            {mediaType === "video" && <video src={mediaSource} autoPlay muted controls={false} loop />}
           </div>
         </TwoColumnsMedia>
       </TwoColumnsLayout>

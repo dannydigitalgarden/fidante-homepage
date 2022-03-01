@@ -4,14 +4,15 @@ import TwoColumnsLayout, { TwoColumnsContent, TwoColumnsMedia } from "components
 
 import "./_feature-video-panel.scss";
 import VideoPlayer from "components/VideoPlayer/VideoPlayer";
-interface Props {
+import { SquareOne } from "components/Squares";
+export interface FeatureVideoPanelProps {
   title: string;
   videoSource: string;
   poster: string;
 }
 
 
-const FeatureVideoPanel = ({ title, videoSource, poster }: Props) => {
+const FeatureVideoPanel = ({ title, videoSource, poster }: FeatureVideoPanelProps) => {
   const videoJsOptions = {
     theme:'forest',
     controls: true,
@@ -33,6 +34,7 @@ const FeatureVideoPanel = ({ title, videoSource, poster }: Props) => {
           </div>
         </TwoColumnsMedia>
         <TwoColumnsContent>
+         <div className="squares"> <SquareOne /></div>
           <div className="feature-video-panel__title">
             <h2>{title}</h2>
           </div>

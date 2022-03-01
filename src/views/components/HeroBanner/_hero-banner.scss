@@ -23,7 +23,7 @@
   .rectangle {
     position: absolute;
     bottom: -1rem;
-    right: 0;
+    right: -1px;
     width: 80%;
 
     @include medium {
@@ -32,7 +32,7 @@
     }
 
     @include large {
-      width: 90%;
+      width: 92.5%;
     }
 
     svg {

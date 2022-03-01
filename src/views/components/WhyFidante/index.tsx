@@ -4,15 +4,16 @@ import Button from "components/Buttons";
 import Statistic from "components/Statistic";
 import "./_why-fidante.scss";
 import { StatisticProps } from "components/Statistic";
+import { SquareTwo } from "components/Squares";
 
-interface Props {
+export interface WhyFidanteProps {
   title: string;
   url?: string;
   intro?: string;
   statistics: StatisticProps[];
 }
 
-const WhyFidante = ({ title, intro, url, statistics }: Props) => {
+const WhyFidante = ({ title, intro, url, statistics }: WhyFidanteProps) => {
   const leftColumnRef = useRef() as MutableRefObject<HTMLDivElement>;
   const rightColumnRef = useRef() as MutableRefObject<HTMLDivElement>;
 
@@ -22,6 +23,7 @@ const WhyFidante = ({ title, intro, url, statistics }: Props) => {
     <div className="why-fidante">
       <TwoColumns options={{ backgroundColor: "light", mediaSide: "right" }}>
         <TwoColumnsContent>
+         <div className="squares"> <SquareTwo /></div>
           <div className="why-fidante__content">
             <div className="why-fidante__heading">
               <h2>{title}</h2>

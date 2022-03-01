@@ -5,6 +5,25 @@
             flex-direction: column-reverse;
         }
 
+        .layout-two-columns__content {
+           .squares {
+            top: 0;
+            right: -10px;
+            width: 35%;
+            max-width: 200px;
+            
+            @include large{
+                width: 70%;
+                max-width: none;
+            }
+           
+            @include xl {
+                width: 82%;
+               
+            }
+           }
+        }
+
         .layout-two-columns__media {
             padding-left: 1rem;
             padding-right: 1rem;
