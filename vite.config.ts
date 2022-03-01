@@ -6,6 +6,7 @@ const pathSrc = path.resolve(__dirname, "./src");
 
 
 export default defineConfig({
+  base: "/fidante-homepage/",
   plugins: [react(), tsconfigPaths()],
   css: {
     preprocessorOptions: {
