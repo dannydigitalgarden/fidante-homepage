@@ -23,15 +23,17 @@
   .rectangle {
     position: absolute;
     bottom: -1rem;
-    right: -1px;
-    width: 80%;
+    right: -32%;
+    width: 110%;
+    max-height: 95%;
+    z-index: 1;
 
-    @include medium {
-      width: 70%;
-      max-height: 90%;
+    @include xl{
+      right: -20%;
     }
 
-    @include large {
+    @include xl5 {
+      right: 0;
       width: 92.5%;
     }
 
@@ -55,6 +57,9 @@
       height: 100%;
     }
 
+    img {
+      transform: scale(1.1);
+    }
     img,
     video {
       width: 100%;
@@ -64,12 +69,13 @@
   }
 
   &__heading {
-    h2,h3,h4,h5,h6 {
-      @extend .h1
-    }
+    position: relative;
 
-    .highlight {
-      color: $accent-color;
+    .line:first-of-type {
+      .word:first-child {
+        color: $accent-color;
+      }
+     
     }
   }
 

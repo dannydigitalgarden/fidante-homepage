@@ -63,19 +63,22 @@ $button-height: 48px;
       transform-origin: right center;
       z-index: 0;
     }
-    &:hover {
-      &::before {
-        max-width: calc(100% + 10px) ;
-        transform: translateX(10px);
-      }
-
-      .button__label {
-          color: $white;
-          transform: translateX(20px);
-      }
-
-      .button__arrow {
-        transform: translateX(10px) translateY(-50%);
+    
+    @media (hover: hover) {
+      &:hover {
+        &::before {
+          max-width: calc(100% + 10px) ;
+          transform: translateX(10px);
+        }
+  
+        .button__label {
+            color: $white;
+            transform: translateX(20px);
+        }
+  
+        .button__arrow {
+          transform: translateX(10px) translateY(-50%);
+        }
       }
     }
 

@@ -6,7 +6,7 @@ import icon4 from 'assets/icons/icon-4.svg'
 import icon5 from 'assets/icons/icon-5.svg'
 
 const heroBanner = {
-    title: "<h1><span class='highlight'>Excellence</span> in investment management</h1>",
+    title: "Excellence in investment management",
     intro: "Fidante Partners forms long term alliances with talented investment teams to support and grow specialist investment management businesses.",
     mediaType: "image",
     mediaSource: "https://images.pexels.com/photos/566305/pexels-photo-566305.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",

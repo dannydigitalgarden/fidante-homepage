@@ -1,0 +1,1 @@
+declare module 'utils/Split3.min.js';

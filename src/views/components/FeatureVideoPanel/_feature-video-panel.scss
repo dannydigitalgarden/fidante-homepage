@@ -40,8 +40,9 @@
         }
     }
     &__title {
+        position: relative;
         @include up-to-large {
-            max-width: 80%;
+            max-width: 85%;
         }
         h2 {
             margin-bottom: 0;

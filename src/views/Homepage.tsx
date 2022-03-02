@@ -1,10 +1,13 @@
-import React from "react";
+import React, {useEffect} from "react";
 import HeroBanner, { HeroBannerProps } from "./components/HeroBanner";
 import FeatureVideoPanel, { FeatureVideoPanelProps } from "./components/FeatureVideoPanel";
 import WhyFidante, { WhyFidanteProps } from "./components/WhyFidante";
 import OurManagers, { OurManagersProps } from "./components/OurManagers";
 import Spotlight, { SpotlightProps } from "./components/Spotlight";
 import LatestInsights, { LatestInsightsProps } from "./components/LatestInsights";
+
+
+
 
 export interface HomepageProps {
   heroBanner: HeroBannerProps;
@@ -16,6 +19,9 @@ export interface HomepageProps {
 }
 
 const Homepage = ({ heroBanner, videoPanel, whyFidante, ourManagers, spotlight, latestInsights }: HomepageProps) => {
+  useEffect(() => {
+
+  }, [])
   return (
     <div className="fidante-homepage container">
       <HeroBanner {...heroBanner} />

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import Homepage, {HomepageProps} from 'views/Homepage'
 import './App.scss'
 import mockdata from './api/mockData'
-import LoadingSpinner from 'components/LoadingSpinner'
+import Preloader from 'components/Preloader'
 
 const App = () => {
   const [data, setData] = useState<HomepageProps | null>(null);
@@ -11,12 +11,12 @@ const App = () => {
     setTimeout(() => {
       setData(mockdata);
       setIsLoading(false)
-    }, 3000)
+    }, 1000)
   })
   return (
     <div className="fidante-app">
       {data && !isLoading && <Homepage {...data} />}
-      <LoadingSpinner isLoading={isLoading}/>
+      <Preloader isLoading={isLoading}/>
     </div>
   )
 }
