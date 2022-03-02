@@ -44,7 +44,7 @@ const heroBanner = {
   
   const ourManagers = {
     title: "Our Managers",
-    backgroundImage: "https://images.pexels.com/photos/5714375/pexels-photo-5714375.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    backgroundImage: "https://images.pexels.com/photos/3206153/pexels-photo-3206153.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
     logos: [
       {
         category: 'Australian Equities',
