@@ -43,7 +43,7 @@ const FeatureVideoPanel = ({ title, videoSource, poster }: FeatureVideoPanelProp
     if (headingRef.current) {
       setTimeout(() => {
         textReveal(headingRef.current, headingRef.current, undefined, undefined, 0)
-      }, 500)
+      }, 1000)
 
       gsap.set(headingRef.current, { y: 20});
 
