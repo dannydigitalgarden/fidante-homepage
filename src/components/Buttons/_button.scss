@@ -28,71 +28,69 @@ $button-height: 48px;
       background-color: $white;
     }
   }
-
-  
 }
-.button.button-secondary.icon-expand  {
-    &::before {
-        background-color: $white;
-    }
-
+.button.button-secondary.icon-expand {
+  &::before {
+    background-color: $white;
+  }
+  @media (hover: hover) {
     &:hover {
-        .button__label {
-            color: $primary-color;
-        }
-    }
-}
-.button.icon-expand {
-    position: relative;
-    height: $button-height;
-    width: fit-content;
-    padding-right: 48px;
-
-
-    &::before {
-      content: "";
-      width: calc(100% + 10px);
-      max-width: $button-height;
-      height: $button-height;
-      border-radius: $button-height;
-      background-color: $primary-color;
-      position: absolute;
-      top: 0;
-      right: 0;
-      transition: 0.5s;
-      transform-origin: right center;
-      z-index: 0;
-    }
-    
-    @media (hover: hover) {
-      &:hover {
-        &::before {
-          max-width: calc(100% + 10px) ;
-          transform: translateX(10px);
-        }
-  
-        .button__label {
-            color: $white;
-            transform: translateX(20px);
-        }
-  
-        .button__arrow {
-          transform: translateX(10px) translateY(-50%);
-        }
+      .button__label {
+        color: $primary-color;
       }
     }
+  }
+}
+.button.icon-expand {
+  position: relative;
+  height: $button-height;
+  width: fit-content;
+  padding-right: 48px;
 
-    .button__arrow {
-        width: 32px;
-        height: 32px;
-        position: absolute;
-        right: 8px;
-        top: 50%;
-        transition: 0.3s;
-        transform: translateY(-50%);
-        background-color: transparent;
+  &::before {
+    content: "";
+    width: calc(100% + 10px);
+    max-width: $button-height;
+    height: $button-height;
+    border-radius: $button-height;
+    background-color: $primary-color;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 0.5s;
+    transform-origin: right center;
+    z-index: 0;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      &::before {
+        max-width: calc(100% + 10px);
+        transform: translateX(10px);
+      }
+
+      .button__label {
+        color: $white;
+        transform: translateX(20px);
+      }
+
+      .button__arrow {
+        transform: translateX(10px) translateY(-50%);
+      }
     }
   }
+
+  .button__arrow {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transition: 0.3s;
+    transform: translateY(-50%);
+    background-color: transparent;
+  }
+}
 
 .button.icon-fill {
   .button__arrow {
@@ -110,14 +108,16 @@ $button-height: 48px;
       transition: 0.3s;
     }
   }
+  @media (hover: hover) {
+    &:hover,
+    &.is-hover {
+      .button__arrow {
+        svg {
+          fill: $white;
+        }
 
-  &:hover, &.is-hover {
-    .button__arrow {
-      svg {
-        fill: $white;
+        background-color: $secondary-color;
       }
-
-      background-color: $secondary-color;
     }
   }
 }

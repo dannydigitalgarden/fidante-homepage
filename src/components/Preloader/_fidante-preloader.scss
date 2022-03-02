@@ -14,14 +14,14 @@
   justify-content: center;
 
   &__inner {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     color: $primary-color;
-    transform:   scale(0.7) rotate(45deg);
+    transform:   scale(0.6) rotate(45deg);
     position: relative;
     overflow: hidden;
     background-color: $grey-1;
@@ -33,7 +33,7 @@
     &::before {
       content: "";
       position: absolute;
-      width: 150px;
+      width: 120px;
       height: 200%;
       background: linear-gradient($primary-color, $accent-color);
       animation: animate 3s linear forwards infinite;

@@ -33,7 +33,7 @@ const WhyFidante = ({ title, intro, url, statistics }: WhyFidanteProps) => {
     const scrollOptions = {
       trigger: ".why-fidante",
       start: 'top 60%',
-      end: '+=85%',
+      end: '+=50%',
       scrub: 1.5,
       toggleActions: "play none none none"
     }
@@ -67,13 +67,13 @@ const WhyFidante = ({ title, intro, url, statistics }: WhyFidanteProps) => {
       })
 
       gsap.set(rightColumnRef.current, {
-        y: 40
+        y: 32
       })
 
 
       gsap.to(leftColumnRef.current, {
         scrollTrigger: {...scrollOptions, scrub: 2},
-        y: 16
+        y: 0
       })
 
       gsap.to(rightColumnRef.current, {

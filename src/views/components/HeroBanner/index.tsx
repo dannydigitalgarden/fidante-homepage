@@ -31,7 +31,7 @@ const HeroBanner = ({  mediaType, mediaSource, title, intro, url }: HeroBannerPr
     const scrollOptions = {
       trigger: ".hero-banner",
       start: 'top top',
-      end: '+=50%',
+      end: '+=80%',
       scrub: 1.5,
       toggleActions: "play none none none"
     }

@@ -31,11 +31,11 @@ const FeatureVideoPanel = ({ title, videoSource, poster }: FeatureVideoPanelProp
   useEffect(() => {  
     gsap.registerPlugin(ScrollTrigger);
 
-    const tl = gsap.timeline();
+
     const scrollOptions = {
       trigger: ".feature-video-panel",
       start: 'top 80%',
-      end: '+=80%',
+      end: '+=50%',
       scrub: 1.25,
       toggleActions: "play none none none"
     }
@@ -45,19 +45,14 @@ const FeatureVideoPanel = ({ title, videoSource, poster }: FeatureVideoPanelProp
         textReveal(headingRef.current, headingRef.current, undefined, undefined, 0)
       }, 1000)
 
-      gsap.set(headingRef.current, { y: 20});
+      gsap.set(headingRef.current, { y: 80});
 
       gsap.to(headingRef.current, {
-        y: -50,
+        y: -10,
         ease: "none",
         scrollTrigger: scrollOptions
       });
     }
-
-    
-
-
-     
 
   }, [])
 

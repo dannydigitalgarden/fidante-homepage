@@ -7,8 +7,6 @@ import Spotlight, { SpotlightProps } from "./components/Spotlight";
 import LatestInsights, { LatestInsightsProps } from "./components/LatestInsights";
 
 
-
-
 export interface HomepageProps {
   heroBanner: HeroBannerProps;
   videoPanel: FeatureVideoPanelProps;

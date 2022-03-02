@@ -4,15 +4,21 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    @extend .padding-t-10;
+    background-attachment: fixed;
+    padding-top: 6rem;
+
+    @include xl2 {
+        padding-top: 9rem
+    }
 
     &__title {
         @extend .padding-left-xl;
         @extend .padding-right-lg;
-        @extend .margin-b-7;
+        
+        margin-bottom: 5rem !important;
 
-        h1 {
-            margin-bottom: 0;
+        @include xl2 {
+            margin-bottom: 8rem;
         }
     }
 }
@@ -65,6 +71,8 @@
         scrollbar-width: 0;
         padding-left: 1rem;
         position: relative;
+        overscroll-behavior-x: none;
+        -webkit-overflow-scrolling: touch;
         &::-webkit-scrollbar {
             display: none;
         }
