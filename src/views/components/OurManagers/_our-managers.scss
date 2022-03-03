@@ -1,11 +1,22 @@
 .our-managers {
     padding-bottom: 2.5rem;
     color: white;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     padding-top: 6rem;
+    overflow: hidden;
+    position: relative;
+
+    .background__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        // background-attachment: fixed;
+    }
 
     @include xl2 {
         padding-top: 9rem
@@ -46,7 +57,12 @@
     &__category {
         padding: 2rem 1rem 2rem 1rem;
         width: 130px;
+        display: flex;
+        align-items: center;
        
+        @include small-medium {
+            align-items: flex-start;
+        }
 
 
         @include large {
@@ -54,7 +70,6 @@
         }
 
         @include xl2 {
-            display: flex;
             align-items: center;
             width: 250px;
         }
@@ -73,6 +88,7 @@
         position: relative;
         overscroll-behavior-x: none;
         -webkit-overflow-scrolling: touch;
+
         &::-webkit-scrollbar {
             display: none;
         }

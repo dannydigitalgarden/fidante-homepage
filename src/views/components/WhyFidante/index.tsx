@@ -17,6 +17,7 @@ export interface WhyFidanteProps {
 }
 
 const WhyFidante = ({ title, intro, url, statistics }: WhyFidanteProps) => {
+
   const leftColumnRef = useRef() as MutableRefObject<HTMLDivElement>;
   const rightColumnRef = useRef() as MutableRefObject<HTMLDivElement>;
   const headingRef = useRef() as MutableRefObject<HTMLDivElement>;
@@ -29,7 +30,6 @@ const WhyFidante = ({ title, intro, url, statistics }: WhyFidanteProps) => {
   useEffect(() => {  
     gsap.registerPlugin(ScrollTrigger);
 
-
     const scrollOptions = {
       trigger: ".why-fidante",
       start: 'top 60%',
@@ -41,9 +41,9 @@ const WhyFidante = ({ title, intro, url, statistics }: WhyFidanteProps) => {
     if (headingRef && introRef && buttonRef && contentRef) {
      setTimeout(() => {
       textReveal(contentRef.current, headingRef.current, introRef.current, buttonRef.current,0)
-     }, 1000);
+     }, 500);
 
-     gsap.set(contentRef.current, { y: 10});
+     gsap.set(contentRef.current, { y: 50});
 
      gsap.to(contentRef.current, {
        y: -50,

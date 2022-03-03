@@ -22,7 +22,6 @@ export const textReveal = (triggerEl?: HTMLElement, headingEl?: HTMLElement, int
     tl.from(splitHeading.chars, {
       duration: 0.5,
       yPercent: 100,
-      opacity: 0,
       stagger: 0.02,
       ease: "circ.out",
       delay: delay ? delay : 0,
@@ -35,7 +34,6 @@ export const textReveal = (triggerEl?: HTMLElement, headingEl?: HTMLElement, int
         splitIntro.words,
       {
         y: 20,
-        opacity: 0,
         duration: 0.4,
         stagger: 0.02,
         ease: "circ.out",
