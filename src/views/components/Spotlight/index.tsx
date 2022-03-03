@@ -8,7 +8,7 @@ import { SquareThree } from "components/Squares";
 import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger";
 import {textReveal} from 'utils/animation'
-
+import colors from "constants/colors";
 
 export interface SpotlightProps {
   title: string;
@@ -23,13 +23,12 @@ const Spotlight = ({ title, intro, url, brands }: SpotlightProps) => {
   const introRef = useRef() as MutableRefObject<HTMLDivElement>
   const buttonRef  = useRef() as MutableRefObject<HTMLDivElement>
   const squareRef = useRef() as MutableRefObject<HTMLDivElement>
-  const mediaRef = useRef() as MutableRefObject<HTMLImageElement>
+  const logoListingRef = useRef() as MutableRefObject<HTMLImageElement>
   const contentRef = useRef() as MutableRefObject<HTMLImageElement>
 
   useEffect(() => {  
     gsap.registerPlugin(ScrollTrigger);
 
-    const logos: any[] = gsap.utils.toArray('.spotlight__logos-listing .brand-logo') 
     const scrollOptions = {
       trigger: ".spotlight",
       start: 'top 60%',
@@ -53,7 +52,7 @@ const Spotlight = ({ title, intro, url, brands }: SpotlightProps) => {
 
      gsap.from('.spotlight .layout-two-columns', {
       scrollTrigger: {...scrollOptions, start:"top 80%", scrub: false, toggleActions: "play none none reverse"},
-      backgroundColor: '#6ccdb3',
+      backgroundColor: colors.accent,
       duration: 1
     })
 
@@ -70,9 +69,9 @@ const Spotlight = ({ title, intro, url, brands }: SpotlightProps) => {
       })
     }
 
-    if(logos?.length > 0) {
-      gsap.from(logos, {
-        scrollTrigger: {trigger:'.spotlight__logos-listing', start:"top 80%", scrub: false, toggleActions: "play none none reverse"},
+    if(logoListingRef.current) {
+      gsap.from(logoListingRef.current, {
+        scrollTrigger: {trigger:logoListingRef.current, start:"top 80%", scrub: false, toggleActions: "play none none reverse"},
         opacity: 0,
         y: 30,
         duration: 0.5,
@@ -100,7 +99,7 @@ const Spotlight = ({ title, intro, url, brands }: SpotlightProps) => {
         </TwoColumnsContent>
         <TwoColumnsMedia>
           {brands?.length > 0 && (
-            <div className="spotlight__logos-listing">
+            <div className="spotlight__logos-listing" ref={logoListingRef}>
               {brands.map((brand) => (
                 <BrandLogo {...brand} showInfo={true} key={brand.name} />
               ))}

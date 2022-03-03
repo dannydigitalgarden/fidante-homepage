@@ -14,11 +14,11 @@ export interface OurManagersProps {
 
 const OurManagers = ({ title, backgroundImage, logos }: OurManagersProps) => {
   const headingRef = useRef() as MutableRefObject<HTMLDivElement>;
+  const logoListingRef = useRef() as MutableRefObject<HTMLDivElement>
 
   useEffect(() => {  
 
     gsap.registerPlugin(ScrollTrigger);
-    const lists = gsap.utils.toArray('.logo-listing') as any[]
 
     if (headingRef.current) {
       setTimeout(() => {
@@ -37,12 +37,17 @@ const OurManagers = ({ title, backgroundImage, logos }: OurManagersProps) => {
       })
     }
 
-    if(lists?.length > 0) {
-        gsap.from(lists, {
-          scrollTrigger: {trigger: '.our-managers__logos-listing-wrapper', start: 'top 80%', scrub: false, toggleActions: "play none none reverse"},
+    if( logoListingRef.current) {
+        gsap.from(logoListingRef.current, {
+          scrollTrigger: {trigger:  logoListingRef.current, start: 'top 80%', scrub: false, toggleActions: "play none none reverse"},
           duration: 0.5,
           opacity: 0,
-          stagger: 0.25
+          y: 30
+        })
+
+        gsap.to(logoListingRef.current, {
+          scrollTrigger: {trigger: '.our-managers', start: 'top 80%', scrub: 1.5, toggleActions: "play none none reverse"},
+          y: -50
         })
     }
 
@@ -57,7 +62,7 @@ const OurManagers = ({ title, backgroundImage, logos }: OurManagersProps) => {
       </div>
 
       {logos?.length > 0 && (
-        <div className="our-managers__logos-listing-wrapper">
+        <div className="our-managers__logos-listing-wrapper" ref={logoListingRef}>
           {logos.map((logo) => (
             <LogoListing {...logo} key={logo.category} />
           ))}
