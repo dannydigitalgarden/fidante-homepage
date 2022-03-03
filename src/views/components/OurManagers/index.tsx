@@ -44,11 +44,6 @@ const OurManagers = ({ title, backgroundImage, logos }: OurManagersProps) => {
           opacity: 0,
           y: 30
         })
-
-        gsap.to(logoListingRef.current, {
-          scrollTrigger: {trigger: '.our-managers', start: 'top 80%', scrub: 1.5, toggleActions: "play none none reverse"},
-          y: -50
-        })
     }
 
   }, [])
