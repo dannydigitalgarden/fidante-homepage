@@ -18,29 +18,30 @@ export const textReveal = (triggerEl?: HTMLElement, headingEl?: HTMLElement, int
 
 
   if (headingEl !== undefined) {
-   const splitHeading = new SplitType(headingEl);
-    tl.from(splitHeading.chars, {
-      duration: 0.5,
-      yPercent: 100,
-      stagger: 0.02,
+   const splitHeading = new SplitType(headingEl, {types:'lines, words'});
+    tl.from(splitHeading.words, {
+      duration: 0.7,
+      yPercent: 101,
+      stagger: 0.08,
       ease: "circ.out",
       delay: delay ? delay : 0,
     });
   }
 
+  console.time('timer')
   if (introEl !== undefined) {
-   const splitIntro = new SplitType(introEl);
     tl.from(
-        splitIntro.words,
+      introEl,
       {
         y: 20,
-        duration: 0.4,
-        stagger: 0.02,
+        duration: 0.5,
+        opacity: 0,
         ease: "circ.out",
       },
-      "-=0.5"
+      "-=0.2"
     );
   }
+  console.timeEnd('timer')
 
   if (buttonEl !== undefined ) {
     tl.from(

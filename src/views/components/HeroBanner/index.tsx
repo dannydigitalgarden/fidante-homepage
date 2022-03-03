@@ -37,7 +37,9 @@ const HeroBanner = ({  mediaType, mediaSource, title, intro, url }: HeroBannerPr
     }
 
     if (headingRef && introRef && buttonRef && contentRef) {
-      textReveal(undefined, headingRef.current, introRef.current, buttonRef.current,1.25)
+      setTimeout(() => {
+        textReveal(undefined, headingRef.current, introRef.current, buttonRef.current,1.25)
+      }, 400)
     }
 
     if (rectRef && mediaRef) {

@@ -40,7 +40,7 @@ const Spotlight = ({ title, intro, url, brands }: SpotlightProps) => {
     if (headingRef && introRef && buttonRef && contentRef) {
      setTimeout(() => {
       textReveal(contentRef.current, headingRef.current, introRef.current, buttonRef.current,0)
-     }, 500);
+     }, 900);
 
      gsap.set(contentRef.current, { y: 40});
 

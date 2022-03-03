@@ -23,7 +23,7 @@ const OurManagers = ({ title, backgroundImage, logos }: OurManagersProps) => {
     if (headingRef.current) {
       setTimeout(() => {
         textReveal(headingRef.current, headingRef.current, undefined, undefined, 0)
-      }, 1000)
+      }, 800)
 
       gsap.to('.background__image', {
         scrollTrigger: {

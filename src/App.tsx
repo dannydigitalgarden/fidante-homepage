@@ -11,7 +11,6 @@ const App = () => {
     setTimeout(() => {
       setData(mockdata);
       setIsLoading(false);
-      console.log(data)
     }, 1500)
   })
   return (

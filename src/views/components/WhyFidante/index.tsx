@@ -41,7 +41,7 @@ const WhyFidante = ({ title, intro, url, statistics }: WhyFidanteProps) => {
     if (headingRef && introRef && buttonRef && contentRef) {
      setTimeout(() => {
       textReveal(contentRef.current, headingRef.current, introRef.current, buttonRef.current,0)
-     }, 500);
+     }, 700);
 
      gsap.set(contentRef.current, { y: 30});
 
