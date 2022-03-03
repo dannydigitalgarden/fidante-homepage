@@ -63,7 +63,7 @@ const HeroBanner = ({  mediaType, mediaSource, title, intro, url }: HeroBannerPr
       });
       }
 
-      gsap.set(contentRef.current, { y: 30});
+      gsap.set(contentRef.current, { y: 10});
 
       gsap.to(contentRef.current, {
         y: -50,

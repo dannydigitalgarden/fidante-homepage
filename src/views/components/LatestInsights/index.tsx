@@ -57,8 +57,8 @@ const LatestInsights = ({ title, articles }: LatestInsightsProps) => {
           scrollTrigger: {trigger: mediaRef.current, start: 'top 80%', scrub: false, toggleActions: "play none none reverse"},
           y: 40,
           delay: 0.5,
-          duration: 0.5,
-          opacity: 0,
+          duration: 0.4,
+          opacity: 0.5,
           stagger: 0.2
         })
       }

@@ -43,10 +43,10 @@ const WhyFidante = ({ title, intro, url, statistics }: WhyFidanteProps) => {
       textReveal(contentRef.current, headingRef.current, introRef.current, buttonRef.current,0)
      }, 500);
 
-     gsap.set(contentRef.current, { y: 50});
+     gsap.set(contentRef.current, { y: 30});
 
      gsap.to(contentRef.current, {
-       y: -50,
+       y: -30,
        ease: "none",
        scrollTrigger: scrollOptions
      });
