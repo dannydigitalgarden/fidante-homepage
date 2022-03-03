@@ -41,8 +41,6 @@ const OurManagers = ({ title, backgroundImage, logos }: OurManagersProps) => {
         gsap.from(lists, {
           scrollTrigger: {trigger: '.our-managers__logos-listing-wrapper', start: 'top 80%', scrub: false, toggleActions: "play none none reverse"},
           duration: 0.5,
-          scaleY: 0,
-          transformOrigin:'top left',
           opacity: 0,
           stagger: 0.25
         })
