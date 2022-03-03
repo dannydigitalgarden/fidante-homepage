@@ -25,19 +25,19 @@ const heroBanner = {
     url: "#",
     statistics: [
       {
-        icon: icon1, figure:"A$87.5B", textColor:"#226257", backgroundColor:"white", description:"total funds under management", url:"#"
+        icon: icon1, figure:"A$87.5B", textColor:"#226257", backgroundColor:"#fff", description:"total funds under management", url:"#"
       },
       {
-        icon: icon2, figure:"8th largest", textColor:"white", backgroundColor:"#6ccdb3", description:"fund manager in Australia", url:"#"
+        icon: icon2, figure:"8th largest", textColor:"#fff", backgroundColor:"#6ccdb3", description:"fund manager in Australia", url:"#"
       },
       {
-        icon:icon3, figure:"17", textColor:"white", backgroundColor:"#226257", description:"manager partnerships", url:"#"
+        icon:icon3, figure:"17", textColor:"#fff", backgroundColor:"#226257", description:"manager partnerships", url:"#"
       },
       {
-        icon:icon4, figure:"10", textColor:"white", backgroundColor:"#226257", description:"office locations", url:"#"
+        icon:icon4, figure:"10", textColor:"#fff", backgroundColor:"#226257", description:"office locations", url:"#"
       },
       {
-        icon:icon5, figure:"221", textColor:"white", backgroundColor:"#226257", description:"employees globally", url:"#"
+        icon:icon5, figure:"221", textColor:"#fff", backgroundColor:"#226257", description:"employees globally", url:"#"
       }
     ]
   }
@@ -183,6 +183,4 @@ export default {
         ourManagers,
         spotlight,
         latestInsights
-    
-        
 }

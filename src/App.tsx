@@ -10,7 +10,8 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setData(mockdata);
-      setIsLoading(false)
+      setIsLoading(false);
+      console.log(data)
     }, 1500)
   })
   return (
