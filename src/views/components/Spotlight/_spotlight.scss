@@ -33,7 +33,6 @@
   }
   .layout-two-columns__media {
     padding: 0 1rem 1rem 1rem;
-    background-color: $white;
 
     @include medium {
       padding: 0 2rem 2rem 2rem;
@@ -41,6 +40,7 @@
 
     @include large {
       padding: 0;
+      background-color: $white;
     }
   }
   &__logos-listing {

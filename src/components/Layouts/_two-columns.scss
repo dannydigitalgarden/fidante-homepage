@@ -47,16 +47,20 @@
     }
     
     &__content {
-         width: 100%;
+        width: 100%;
         display: flex;
         align-items: center;
         padding-top: 6rem;
-        padding-bottom: 6rem;
+        padding-bottom: 4rem;
         position: relative;
         overflow: hidden;
 
         @extend .padding-left-lg;
         @extend .padding-right-xl;
+
+        @include large {
+            padding-bottom: 6rem;
+        }
 
         @include xl {
             width: 50%;

@@ -49,20 +49,17 @@ const LatestInsights = ({ title, articles }: LatestInsightsProps) => {
       })
     }
 
-    
 
-    if ( window.matchMedia('(min-width: 960px)').matches) {
       if (cards?.length > 0 &&  mediaRef.current){
         gsap.from(cards, {
           scrollTrigger: {trigger: mediaRef.current, start: 'top 80%', scrub: false, toggleActions: "play none none reverse"},
           y: 40,
-          delay: 0.5,
           duration: 0.4,
-          opacity: 0.5,
+          opacity: 0,
           stagger: 0.2
         })
       }
-    }
+
 
 
   }, [])
