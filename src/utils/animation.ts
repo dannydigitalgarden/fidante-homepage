@@ -28,7 +28,6 @@ export const textReveal = (triggerEl?: HTMLElement, headingEl?: HTMLElement, int
     });
   }
 
-  console.time('timer')
   if (introEl !== undefined) {
     tl.from(
       introEl,
@@ -41,7 +40,6 @@ export const textReveal = (triggerEl?: HTMLElement, headingEl?: HTMLElement, int
       "-=0.2"
     );
   }
-  console.timeEnd('timer')
 
   if (buttonEl !== undefined ) {
     tl.from(
