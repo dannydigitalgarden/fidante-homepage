@@ -4,6 +4,10 @@ import icon2 from 'assets/icons/icon-2.svg'
 import icon3 from 'assets/icons/icon-3.svg'
 import icon4 from 'assets/icons/icon-4.svg'
 import icon5 from 'assets/icons/icon-5.svg'
+import zenith from 'assets/images/zenith-distribution.png';
+import zenith2 from 'assets/images/zenith-recommended.png';
+import impax from 'assets/images/impax_logo.png'
+import cipam from 'assets/images/cipam_logo.png'
 
 const heroBanner = {
     title: "Excellence in investment management",
@@ -81,7 +85,7 @@ const heroBanner = {
             name:"h", description:'Distributor of the Year', logo:"https://www.alphinity.com.au/wp-content/themes/alphin/images/logo.png", url:"#"
           },
           {
-            name:"j", description:'Emerging Manager Winner', logo:"https://www.fidante.com/-/media/fidante/managers/impax-175-logo.png?h=30&w=175&la=en&hash=90CAF16A20A40D1D9094F5C80305EF8E", url:"#"
+            name:"j", description:'Emerging Manager Winner', logo: impax , url:"#"
           },
           {
             name:"k", description:'Fidante launches new Emerging Market fund manager', logo:"https://www.fidante.com/-/media/fidante/managers/oxcap/oxcaplogo50.png?h=50&w=136&la=en&hash=05424EA1B8C7E02AB8AE864C317614A1", url:"#"
@@ -103,7 +107,7 @@ const heroBanner = {
             name:"e", description:'Fidante launches new Emerging Market fund manager', logo:"https://www.fidante.com/-/media/fidante/managers/24754-bentham-logo-transparent.png?h=41&w=167&la=en&hash=0451A764B764BB417DB90620B6C2A7AF", url:"#"
           },
           {
-            name:"t", description:'Recommended rating', logo:"https://www.fidante.com/-/media/fidante/managers/cipam_logo-x-167.jpg?h=47&w=180&la=en&hash=446DFA38F3867E32998DA3B2D93DD190", url:"#"
+            name:"t", description:'Recommended rating', logo: cipam, url:"#"
           },
           {
             name:"y", description:'Recommended rating', logo:"https://www.fidante.com/-/media/fidante/managers/24754-kapstream-logo-transparent.png?h=56&w=158&la=en&hash=3FC712983D7943C50E8AF3A11BDE6547", url:"#"
@@ -131,7 +135,7 @@ const heroBanner = {
     url: "#",
     brands: [
       {
-        name:"Fidante", description:'Distributor of the Year', logo:"https://www.alphinity.com.au/wp-content/themes/alphin/images/logo.png", url:"#"
+        name:"Fidante", description:'Distributor of the Year', logo:zenith, url:"#"
       },
       {
         name:"Eiger Capital", description:'Emerging Manager Winner', logo:"https://images.squarespace-cdn.com/content/5bcfdca2f4e531366d9e89fd/4f518aad-4b51-46e7-9362-5fccfb4e5549/FMOTY2021_tagline_black.png?format=1500w&content-type=image%2Fpng", url:"#"
@@ -140,7 +144,7 @@ const heroBanner = {
         name:"Ox Capital", description:'Fidante launches new Emerging Market fund manager', logo:"https://www.fidante.com/-/media/fidante/managers/oxcap/oxcaplogo50.png?h=50&w=136&la=en&hash=05424EA1B8C7E02AB8AE864C317614A1", url:"#"
       },
       {
-        name:"Impax Asset Management", description:'Recommended rating', logo:"https://www.fidante.com/-/media/fidante/managers/lennox_logo_166x60px/lennox_logo_166x60px_72dpi.png?h=60&w=166&la=en&hash=3422FE2D7E853392B010CC1F35CCFDAB", url:"#"
+        name:"Impax Asset Management", description:'Recommended rating', logo:zenith2, url:"#"
       }
     ]
   }
@@ -163,13 +167,13 @@ const latestInsights = {
       {
         title: "Foundations for global net zero: An investor’s reflections on COP26",
         intro: "While this year is only a few weeks old, the key theme in markets already appears to be well established.",
-        image: "https://images.pexels.com/photos/11218623/pexels-photo-11218623.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        image: "https://images.pexels.com/photos/8685551/pexels-photo-8685551.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
         url: "#"
       },
       {
         title: "Greening the Real Economy: An Investor's Perspective on COP26",
         intro: "While this year is only a few weeks old, the key theme in markets already appears to be well established.",
-        image: "https://images.pexels.com/photos/11218623/pexels-photo-11218623.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        image: "https://images.pexels.com/photos/8742880/pexels-photo-8742880.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         url: "#"
       }
     ]
